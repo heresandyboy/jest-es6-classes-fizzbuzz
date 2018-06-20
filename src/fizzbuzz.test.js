@@ -14,7 +14,13 @@ describe('a game of fizzbuzz', () => {
 
     describe('for the number 1', () => {
         test('says "1"', () => {          
-            expect(_fizzBuzzGame.say()).toEqual("1")
+            expect(_fizzBuzzGame.say(1)).toEqual("1")
+        })
+    })
+
+    describe('for multiples of three says "Fizz"', () => {
+        test('for the number 3 says "Fizz"', () => {
+            expect(_fizzBuzzGame.say(3)).toEqual("Fizz")
         })
     })
   
