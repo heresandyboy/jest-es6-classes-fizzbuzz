@@ -1,5 +1,8 @@
 export default class FizzBuzzGame {
     say(number) {
-        return "1"
+        if (number === 3)
+            return "Fizz"
+        else
+            return "1"
     }
 }
