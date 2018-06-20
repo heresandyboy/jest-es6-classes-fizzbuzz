@@ -1,6 +1,13 @@
+import FizzBuzzGame from './FizzBuzzGame'
+
+let _fizzBuzzGame = undefined
+
+beforeEach(() => {
+    _fizzBuzzGame = new FizzBuzzGame()
+})
 
 describe('a game of fizzbuzz', () => {
-    test('starting a new game with no input does nothing', () => {
-        expect(new FizzBuzzGame()).toBeUndefined()
+    test('is defined', () => {
+        expect(_fizzBuzzGame).toBeDefined()
     })
 })

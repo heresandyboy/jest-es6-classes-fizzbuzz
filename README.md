@@ -26,6 +26,10 @@ or
 
 ## vscode plugins tried
 
+JavaScript (ES6) code snippets ```xabikos.javascriptsnippets```
+
 GitLens — Git supercharged ```eamodio.gitlens```
 
 Git History ```donjayamanne.githistory```
+
+Bracket Pair Colorizer ```coenraads.bracket-pair-colorizer```
