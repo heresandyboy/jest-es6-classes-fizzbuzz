@@ -1,5 +1,5 @@
 export default class FizzBuzzGame {
     say() {
-        return ""
+        return "1"
     }
 }
