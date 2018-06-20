@@ -7,8 +7,10 @@ const setupGame = (i) => {
 }
 
 describe('a game of fizzbuzz', () => {
-    setupGame()
+    
     test('is defined', () => {
+        setupGame()
         expect(_fizzBuzzGame).toBeDefined()
-    })    
+    })
+  
 })
