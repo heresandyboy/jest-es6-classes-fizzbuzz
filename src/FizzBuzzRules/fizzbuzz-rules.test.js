@@ -21,3 +21,35 @@ describe('fizzbuzz rules spec', () => {
         expect(_fizzBuzzRules.rulesInput).toEqual(_rulesInput)
     })
 })
+
+
+describe('fizzbuzz rules json file spec', () => {
+    
+    test('rules input is defined', () => {       
+        expect(_rulesInput).toBeDefined()
+    })
+
+    test('JSON.parse throws error if input is not valid json', () => {
+        _rulesInput = "not valid json"
+        expect(() => {
+            JSON.parse(_rulesInput)
+        }).toThrow()
+    })
+
+    test('rules input is valid json', () => {       
+        expect(isJSON(_rulesInput)).toBe(true)
+    })
+
+})
+
+const isJSON = (str) => {
+    try {
+        const json = JSON.parse(str);
+        if (Object.prototype.toString.call(json).slice(8,-1) !== 'Object') {
+        return false
+        }
+    } catch (e) {
+        return false
+    }
+    return true
+}
