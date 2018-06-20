@@ -18,6 +18,6 @@ describe('fizzbuzz rules spec', () => {
     })
 
     test('rules can be input', () => {      
-        expect(_fizzBuzzRules.constructor.classProperty.rulesInput).toEqual(_rulesInput)
+        expect(_fizzBuzzRules.rulesInput).toEqual(_rulesInput)
     })
 })
