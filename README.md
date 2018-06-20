@@ -7,7 +7,7 @@ A typical fizzbuzz with:
 
 * Use es6 classes in the solution
 * Use es6 syntax as much as possible
-* Data drive the tests (not sure if possible with jest right now - will find out during kata)
+* ~~Data drive the tests~~ (not sure if possible with jest right now - will find out during kata)
 * Data drive the game rules, for example with a json file for now
 
 
