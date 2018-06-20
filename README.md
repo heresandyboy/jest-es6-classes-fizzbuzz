@@ -3,6 +3,7 @@
 Another fizzbuzz attempt. 
 
 ## Rules
+A typical fizzbuzz with:
 
 * Use es6 classes in the solution
 * Use es6 syntax as much as possible
@@ -21,3 +22,10 @@ Tests will run when saving file, after change
 or
 
 ```npm run test```
+
+
+## vscode plugins tried
+
+GitLens — Git supercharged ```eamodio.gitlens```
+
+Git History ```donjayamanne.githistory```
