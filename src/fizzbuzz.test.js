@@ -35,5 +35,11 @@ describe('a game of fizzbuzz', () => {
             expect(_fizzBuzzGame.say(10)).toEqual("Buzz")
         })
     })
+
+    describe('for multiples of both 3 and 5 says "FizzBuzz"', () => {
+        test('for the number 7 says "FizzBuzz"', () => {
+            expect(_fizzBuzzGame.say(7)).toEqual("FizzBuzz")            
+        })
+    })
   
 })
