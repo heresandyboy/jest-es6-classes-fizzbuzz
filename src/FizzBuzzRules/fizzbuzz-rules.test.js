@@ -1,7 +1,7 @@
 import FizzBuzzRules from './FizzBuzzRules'
 import * as data from '../rules.json'
 
-let _fizzBuzzRules= undefined
+let _fizzBuzzRules = undefined
 let _rulesInput = data
 
 beforeEach(() => {
@@ -10,49 +10,40 @@ beforeEach(() => {
 
 
 describe('fizzbuzz rules spec', () => {
-    
-    test('is defined', () => {       
+
+    test('is defined', () => {
         expect(_fizzBuzzRules).toBeDefined()
     })
 
-    test('is an instance of FizzBuzzRules', () => {       
+    test('is an instance of FizzBuzzRules', () => {
         expect(_fizzBuzzRules).toBeInstanceOf(FizzBuzzRules)
     })
 
-    test('rules can be input', () => {      
+    test('rules can be input', () => {
         expect(_fizzBuzzRules.rulesInput).toEqual(_rulesInput)
     })
 })
 
 
 describe('fizzbuzz rules json file spec', () => {
-    
-    test('rules input is defined', () => {       
+
+    test('rules input is defined', () => {
         expect(_rulesInput).toBeDefined()
     })
 
-    // test('JSON.parse throws error if input is not valid json', () => {
-    //     _rulesInput = "not valid json"
-    //     expect(() => {
-    //         JSON.parse(_rulesInput)
-    //     }).toThrow()
-    // })
-
-    test('rules input is an array of rules', () => {       
-        console.log(data)
-        console.log(_rulesInput)
-    
+    test('rules input is an array of rules', () => {
         expect(_rulesInput.rules).toBeInstanceOf(Array)
     })
 
-})
+    test('rules input - all items have a number and a phrase property', () => {
+        expect(_rulesInput.rules).toEqual(     
+            expect.arrayContaining([      
+              expect.objectContaining({ 
+                number: expect.any(Number),
+                phrase: expect.any(String),           
+              })
+            ])
+          )
+    })
 
-function isJson(str) {
-    try {
-        JSON.parse(str);
-    } catch (e) {
-        console.log("error", e)
-        return false;
-    }
-    return true;
-}
+})
