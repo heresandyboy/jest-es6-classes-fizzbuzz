@@ -1,11 +1,13 @@
 import FizzBuzzRules from './FizzBuzzRules'
+import * as data from '../rules.json'
 
 let _fizzBuzzRules= undefined
-let _rulesInput = "rule"
+let _rulesInput = data
 
 beforeEach(() => {
     _fizzBuzzRules = new FizzBuzzRules(_rulesInput)
 })
+
 
 describe('fizzbuzz rules spec', () => {
     
@@ -29,27 +31,28 @@ describe('fizzbuzz rules json file spec', () => {
         expect(_rulesInput).toBeDefined()
     })
 
-    test('JSON.parse throws error if input is not valid json', () => {
-        _rulesInput = "not valid json"
-        expect(() => {
-            JSON.parse(_rulesInput)
-        }).toThrow()
-    })
+    // test('JSON.parse throws error if input is not valid json', () => {
+    //     _rulesInput = "not valid json"
+    //     expect(() => {
+    //         JSON.parse(_rulesInput)
+    //     }).toThrow()
+    // })
 
-    test('rules input is valid json', () => {       
-        expect(isJSON(_rulesInput)).toBe(true)
+    test('rules input is an array of rules', () => {       
+        console.log(data)
+        console.log(_rulesInput)
+    
+        expect(_rulesInput.rules).toBeInstanceOf(Array)
     })
 
 })
 
-const isJSON = (str) => {
+function isJson(str) {
     try {
-        const json = JSON.parse(str);
-        if (Object.prototype.toString.call(json).slice(8,-1) !== 'Object') {
-        return false
-        }
+        JSON.parse(str);
     } catch (e) {
-        return false
+        console.log("error", e)
+        return false;
     }
-    return true
+    return true;
 }
