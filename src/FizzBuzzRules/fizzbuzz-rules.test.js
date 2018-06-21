@@ -3,15 +3,16 @@ import FizzBuzzRule from './FizzBuzzRule'
 import * as data from '../rules.json'
 
 let _fizzBuzzRules = undefined
+let _fizzBuzzRule = undefined
 let _rulesInput = data
 
-beforeEach(() => {
-    _fizzBuzzRules = new FizzBuzzRules(_rulesInput)
-})
 
 
-describe('fizzbuzz rules spec', () => {
-
+describe('FizzBuzzRules spec', () => {
+    beforeEach(() => {
+        _fizzBuzzRules = new FizzBuzzRules(_rulesInput)    
+    })
+    
     test('is defined', () => {
         expect(_fizzBuzzRules).toBeDefined()
     })
@@ -35,8 +36,18 @@ describe('fizzbuzz rules spec', () => {
             ])
           )
     })
+})
 
 
+describe('FizzBuzzRule spec', () => {
+    beforeEach(() => {
+        _fizzBuzzRule = new FizzBuzzRule()
+    })
+
+    test('has a number and a phrase propety', () => {
+        expect(_fizzBuzzRule.number).toBeDefined()
+        expect(_fizzBuzzRule.phrase).toBeDefined()
+    })
 })
 
 
