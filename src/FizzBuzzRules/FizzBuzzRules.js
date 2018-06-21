@@ -14,6 +14,19 @@ class FizzBuzzRules {
         }
         return arr
     }
+
+    forNumber = (number) => ({        
+        says: () => {
+            let str = ""
+            for (const rule of this.rules) {
+                if (rule.matches(number)) {
+                    str += rule.phrase
+                }              
+            }
+            if (str === "") str = number
+            return str
+        }
+    }) 
 }
 
 export default FizzBuzzRules

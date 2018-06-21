@@ -45,7 +45,7 @@ describe('FizzBuzzRules spec', () => {
         })        
         
         describe('the rules can be checked against a given number', () => {
-            test('when checked for a 3 the rules say "Fizz', () => {
+            test('when checked for a 3 the rules say "Fizz"', () => {
                 expect(_fizzBuzzRules.forNumber(3).says()).toEqual("Fizz")
             })
         })
