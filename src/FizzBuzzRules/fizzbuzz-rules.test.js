@@ -44,9 +44,9 @@ describe('FizzBuzzRule spec', () => {
         _fizzBuzzRule = new FizzBuzzRule()
     })
 
-    test('has a number and a phrase propety', () => {
-        expect(_fizzBuzzRule.number).toBeDefined()
-        expect(_fizzBuzzRule.phrase).toBeDefined()
+    test('has a number propety of type number and phrase of type string', () => {
+        expect(typeof _fizzBuzzRule.number).toBe("number")
+        expect(typeof _fizzBuzzRule.phrase).toBe("string")
     })
 })
 
