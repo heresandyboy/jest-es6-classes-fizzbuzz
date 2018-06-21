@@ -12,7 +12,6 @@ class FizzBuzzRules {
         for (let rule of rules) {
             arr.push(new FizzBuzzRule(rule.number, rule.phrase))        
         }
-
         return arr
     }
 }
