@@ -36,6 +36,14 @@ describe('FizzBuzzRules spec', () => {
             ])
           )
     })
+
+    describe('when given a rule', () => {
+
+        test('the first rule input is the same as the first rule ', () => {
+            expect(_rulesInput.rules[0].number).toEqual(_fizzBuzzRules.rules[0].number)
+            expect(_rulesInput.rules[0].phrase).toEqual(_fizzBuzzRules.rules[0].phrase)
+        })
+    })
 })
 
 
