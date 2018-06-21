@@ -1,4 +1,7 @@
 export default class FizzBuzzGame {
+    constructor(rules) {
+        this.rules = []
+    }
     say(number) {
         if (number % 3 === 0 && number % 5 === 0)
             return "FizzBuzz"
