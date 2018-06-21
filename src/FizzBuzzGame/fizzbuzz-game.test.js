@@ -50,8 +50,12 @@ describe('a game of fizzbuzz', () => {
     })
 
     describe('has rules that can be set', () => {
-        test('game rules are defined', () => {
+        test('rules are defined', () => {
             expect(_fizzBuzzGame.rules).toBeDefined()
+        })
+
+        test('rules are FizzBuzzRules', () => {
+            expect(_fizzBuzzGame.rules).toBeInstanceOf(FizzBuzzRules)
         })
     })
 })
