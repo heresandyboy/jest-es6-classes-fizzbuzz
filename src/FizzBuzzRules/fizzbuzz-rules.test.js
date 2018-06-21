@@ -43,6 +43,13 @@ describe('FizzBuzzRules spec', () => {
             expect(_rulesInput.rules[0].number).toEqual(_fizzBuzzRules.rules[0].number)
             expect(_rulesInput.rules[0].phrase).toEqual(_fizzBuzzRules.rules[0].phrase)
         })
+
+        describe('a rule for number 3 phrase Fizz', () => {
+            const rule = new FizzBuzzRule(3, "Fizz")
+            test('matches when given a three', () => {
+                expect(rule.matches(3)).toBe(true)
+            })
+        })
     })
 })
 
