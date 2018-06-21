@@ -35,12 +35,12 @@ describe('fizzbuzz rules json file spec', () => {
         expect(_rulesInput.rules).toBeInstanceOf(Array)
     })
 
-    test('rules input - all items have a number and a phrase property', () => {
+    test('rules input items have a number and a phrase property', () => {
         expect(_rulesInput.rules).toEqual(     
             expect.arrayContaining([      
               expect.objectContaining({ 
                 number: expect.any(Number),
-                phrase: expect.any(String),           
+                phrase: expect.any(String),
               })
             ])
           )

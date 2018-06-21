@@ -1,3 +1,6 @@
 {
-    "rules": []
+    "rules": [{
+        "number": 3,
+        "phrase": "Fizz"
+    }]
 }
