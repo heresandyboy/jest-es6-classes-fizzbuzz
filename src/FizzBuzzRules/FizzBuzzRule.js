@@ -6,7 +6,6 @@ class FizzBuzzRule {
 
     matches(number) {
         return number % this.number ===0
-    }
-   
+    }   
 }
 export default FizzBuzzRule

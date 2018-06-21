@@ -37,17 +37,16 @@ describe('FizzBuzzRules spec', () => {
           )
     })
 
-    describe('when given a rule', () => {
+    describe('when given rules', () => {
 
         test('the first rule input is the same as the first rule out', () => {
             expect(_rulesInput.rules[0].number).toEqual(_fizzBuzzRules.rules[0].number)
             expect(_rulesInput.rules[0].phrase).toEqual(_fizzBuzzRules.rules[0].phrase)
-        })
-
-        describe('a rule for number 3 phrase Fizz', () => {
-            const rule = new FizzBuzzRule(3, "Fizz")
-            test('matches when given a three', () => {
-                expect(rule.matches(3)).toBe(true)
+        })        
+        
+        describe('the rules can be checked against a given number', () => {
+            test('when checked for a 3 the rules say "Fizz', () => {
+                expect(_fizzBuzzRules.forNumber(3).says()).toEqual("Fizz")
             })
         })
     })
@@ -62,6 +61,17 @@ describe('FizzBuzzRule spec', () => {
     test('has a number propety of type number and phrase of type string', () => {
         expect(typeof _fizzBuzzRule.number).toBe("number")
         expect(typeof _fizzBuzzRule.phrase).toBe("string")
+    })
+
+    describe('a rule for number 3 phrase Fizz', () => {
+        const rule = new FizzBuzzRule(3, "Fizz")
+        test('matches when given a three', () => {
+            expect(rule.matches(3)).toBe(true)
+        })
+
+        test('the returned phrase is Fizz', () => {
+            expect(rule.phrase).toEqual("Fizz")
+        })
     })
 })
 
