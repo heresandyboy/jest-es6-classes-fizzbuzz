@@ -22,6 +22,10 @@ describe('fizzbuzz rules spec', () => {
     test('rules can be input', () => {
         expect(_fizzBuzzRules.rulesInput).toEqual(_rulesInput)
     })
+
+    test('rules can be retrieved', () => {
+        expect(_fizzBuzzRules.rules).toBeDefined()
+    })
 })
 
 
