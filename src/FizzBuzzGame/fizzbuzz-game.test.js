@@ -1,9 +1,12 @@
 import FizzBuzzGame from './FizzBuzzGame'
+import FizzBuzzRules from '../FizzBuzzRules/FizzBuzzRules'
+import FizzBuzzRule from '../FizzBuzzRules/FizzBuzzRule'
+import * as data from '../rules.json'
 
 let _fizzBuzzGame = undefined
 
 beforeEach(() => {
-    _fizzBuzzGame = new FizzBuzzGame()
+    _fizzBuzzGame = new FizzBuzzGame(new FizzBuzzRules(data))
 })
 
 describe('a game of fizzbuzz', () => {
@@ -54,8 +57,12 @@ describe('a game of fizzbuzz', () => {
             expect(_fizzBuzzGame.rules).toBeDefined()
         })
 
-        test('rules are FizzBuzzRules', () => {
-            expect(_fizzBuzzGame.rules).toBeInstanceOf(FizzBuzzRules)
+        test('rules are of an Array of FizzBuzzRule', () => {
+            expect(_fizzBuzzGame.rules).toEqual(     
+                expect.arrayContaining([      
+                  expect.any(FizzBuzzRule)
+                ])
+              )
         })
     })
 })
