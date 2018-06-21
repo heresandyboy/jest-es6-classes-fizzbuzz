@@ -1,6 +1,5 @@
 import FizzBuzzGame from './FizzBuzzGame'
 import FizzBuzzRules from '../FizzBuzzRules/FizzBuzzRules'
-import FizzBuzzRule from '../FizzBuzzRules/FizzBuzzRule'
 import * as data from '../rules.json'
 
 let _fizzBuzzGame = undefined
@@ -18,8 +17,8 @@ describe('a game of fizzbuzz', () => {
     describe('has the following basic rules', () => {
 
         describe('for the number 1', () => {
-            test('says "1"', () => {
-                expect(_fizzBuzzGame.say(1)).toEqual("1")
+            test('says 1', () => {
+                expect(_fizzBuzzGame.say(1)).toEqual(1)
             })
         })
 
@@ -58,11 +57,7 @@ describe('a game of fizzbuzz', () => {
         })
 
         test('rules are of an Array of FizzBuzzRule', () => {
-            expect(_fizzBuzzGame.rules).toEqual(     
-                expect.arrayContaining([      
-                  expect.any(FizzBuzzRule)
-                ])
-              )
+            expect(_fizzBuzzGame.rules).toBeInstanceOf(FizzBuzzRules)
         })
     })
 })

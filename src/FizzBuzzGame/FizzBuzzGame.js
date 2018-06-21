@@ -1,13 +1,9 @@
 export default class FizzBuzzGame {
-    constructor(input) {
-        this.rules = input.rules
+    constructor(rules) {
+        this.rules = rules
     }
     say(number) {
-        console.log(this.rules)
-        // for (rule of this.rules) {
-        //     console.log(rule)
-        // }
-
+        
         if (number % 3 === 0 && number % 5 === 0)
             return "FizzBuzz"
         else if (number % 3 === 0)
@@ -15,6 +11,6 @@ export default class FizzBuzzGame {
         else if (number % 5 === 0)
         return "Buzz"
         else
-            return "1"
+            return 1
     }
 }
