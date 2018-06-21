@@ -10,7 +10,7 @@ let _rulesInput = data
 
 describe('FizzBuzzRules spec', () => {
     beforeEach(() => {
-        _fizzBuzzRules = new FizzBuzzRules(_rulesInput)    
+        _fizzBuzzRules = new FizzBuzzRules(_rulesInput)
     })
     
     test('is defined', () => {
@@ -22,7 +22,7 @@ describe('FizzBuzzRules spec', () => {
     })
 
     test('rules can be input', () => {
-        expect(_fizzBuzzRules.rulesInput).toEqual(_rulesInput)
+        expect(_fizzBuzzRules.rulesInput).toEqual(_rulesInput)        
     })
 
     test('rules can be retrieved', () => {
@@ -39,7 +39,7 @@ describe('FizzBuzzRules spec', () => {
 
     describe('when given a rule', () => {
 
-        test('the first rule input is the same as the first rule ', () => {
+        test('the first rule input is the same as the first rule out', () => {
             expect(_rulesInput.rules[0].number).toEqual(_fizzBuzzRules.rules[0].number)
             expect(_rulesInput.rules[0].phrase).toEqual(_fizzBuzzRules.rules[0].phrase)
         })
