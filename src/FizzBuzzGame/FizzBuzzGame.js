@@ -3,7 +3,7 @@ export default class FizzBuzzGame {
         this.rules = rules
     }
     
-    say(number) {
-        return this.rules.forNumber(number).says()    
+    say = (number) => {
+        return this.rules.forNumber(number).says()
     }
 }

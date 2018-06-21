@@ -6,7 +6,7 @@ class FizzBuzzRules {
         this.rules = this._mapRules(rulesInput.rules)
     }
 
-    _mapRules(rules) {
+    _mapRules = (rules) => {
         let arr = []
 
         for (let rule of rules) {
