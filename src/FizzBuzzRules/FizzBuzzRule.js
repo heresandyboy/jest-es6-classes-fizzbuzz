@@ -4,8 +4,9 @@ class FizzBuzzRule {
         this.phrase = phrase ? phrase : ""
     }
 
-    matches = (number) => {
-        
+    matches(number) {
+        return number % this.number ===0
     }
+   
 }
 export default FizzBuzzRule
