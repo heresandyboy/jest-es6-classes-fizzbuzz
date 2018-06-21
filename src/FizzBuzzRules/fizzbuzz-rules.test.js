@@ -1,4 +1,5 @@
 import FizzBuzzRules from './FizzBuzzRules'
+import FizzBuzzRule from './FizzBuzzRule'
 import * as data from '../rules.json'
 
 let _fizzBuzzRules = undefined
@@ -27,6 +28,15 @@ describe('fizzbuzz rules spec', () => {
         expect(_fizzBuzzRules.rules).toBeDefined()
     })
     
+    test('rules are an array of FizzBuzzRule', () => {
+        expect(_fizzBuzzRules.rules).toEqual(     
+            expect.arrayContaining([      
+              expect.any(FizzBuzzRule)
+            ])
+          )
+    })
+
+
 })
 
 

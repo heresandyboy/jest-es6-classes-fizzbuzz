@@ -1,7 +1,10 @@
-export default class FizzBuzzRules {
+import FizzBuzzRule from "./FizzBuzzRule";
+
+class FizzBuzzRules {
     constructor(rulesInput) {
         this.rulesInput = rulesInput
-        this.rules = {}
+        this.rules = []
     }
-    
 }
+
+export default FizzBuzzRules
